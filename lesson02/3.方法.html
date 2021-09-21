@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  var zty={
+    name: '张天泳',
+    birth: 2002,
+    //方法
+    age1: getAge,
+    age: function (){
+      //今年-出生
+      var now = new Date().getFullYear();
+      return now-this.birth;
+    }
+  }
+  // 属性
+  zty.name;
+  // 方法
+  zty.age();
+  function getAge(){
+    //今年-出生
+    var now = new Date().getFullYear();
+    return now-this.birth;
+  }
+
+  getAge.apply(zty,[])
+
+</script>
+
+</body>
+</html>

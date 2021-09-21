@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="father">
+  <h1>标题</h1>
+  <p id="p1">p1</p>
+  <p class="p2">p2</p>
+</div>
+
+<script>
+  //对应css的选择器
+  let self=document.getElementById('p1');
+  let father=self.parentElement;
+  father.removeChild(self);
+</script>
+</body>
+</html>

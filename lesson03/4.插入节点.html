@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="j">JavaScript</p>
+<div id="list">
+  <p id="j1">javase</p>
+  <p id="j2">javame</p>
+  <p id="j3">javaee</p>
+</div>
+<script>
+  let j=document.getElementById('j');
+      list=document.getElementById('list');
+  list.appendChild(j);//追加元素，将已经存在的节点更改位置
+
+  //通过js新建一个节点
+  let newp = document.createElement('p');//创建一个p标签
+  newp.setAttribute('id','newp');//等价于 newp.id='j4';
+  newp.innerText='Hello,zty!';
+  list.appendChild(newp);
+
+  //创建一个标签节点
+  let myscript=document.createElement('script');
+  myscript.setAttribute('type','text/javascript');
+   list.appendChild(myscript);
+
+  //可以创建一个style标签
+  let myStyle = document.createElement('style');//创建了一个空style标签
+  myStyle.setAttribute('type','text/css');
+  myStyle.innerHTML = 'body{background-color:chartreuse;}';//设置标签内容
+
+  document.getElementsByTagName('head')[0].appendChild(myStyle);
+
+  //在前面插入一个节点
+  var j2 = document.getElementById('j2');
+  var j = document.getElementById('j');
+  var list = document.getElementById('list');
+  //要包含的节点.insertBefore(newNode,targetNode)
+  list.insertBefore(j,j2);
+
+
+</script>
+</body>
+</html>
